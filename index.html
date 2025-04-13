@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Navigasi</title>
+
+    <style>
+        /* Existing Style */
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #f9c5d1, #fddde6, #c1f0f6, #d7e5f5);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        header {
+            background-color: cadetblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a {
+            color: rgb(226, 239, 46);
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 25px;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: blueviolet;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+            color: #333;
+        }
+
+        /* Card Flip Style */
+        .card {
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+            margin: 50px auto;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .card-front {
+            background-color: cadetblue;
+        }
+
+        .card-back {
+            background-color: rgb(226, 239, 46);
+            color: #333;
+            transform: rotateY(180deg);
+        }
+
+        /* Text Animation */
+        .animated-text {
+            text-align: center;
+            margin: 20px;
+            font-size: 22px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {opacity: 0; transform: translateY(20px);}
+            100% {opacity: 1; transform: translateY(0);}
+        }
+        
+    /* Typing Effect for Main Title */
+    .typing {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: .15em solid yellow;
+        animation:
+            typing 3s steps(30, end),
+            blink-caret .75s step-end infinite;
+        font-size: 50px;
+        text-align: center;
+        color: yellow;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: yellow; }
+    }
+
+    /* Fade-In Slide-Up Animation */
+    .animated-text {
+        text-align: center;
+        margin: 20px;
+        font-size: 22px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeSlide 2s ease forwards;
+        animation-delay: 3.5s;
+    }
+
+    @keyframes fadeSlide {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">Home</a>
+        <a href="agama.html">Agama</a>
+        <a href="ppkn.html">PPKN</a>
+        <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+        <a href="mandarin.html">Mandarin</a>
+        <a href="ips.html">IPS</a>
+        <a href="english.html">English</a>
+    </header>
+
+    <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px; text-align: center;">Home</p>
+
+    <div style="text-align: center;">
+        <img src="Night Market.png" width="800" height="800">
+    </div>
+
+    <p class="animated-text">
+        Saat saya menjelajahi Hualien, Taiwan, saya terpesona oleh keindahan alamnya yang memukau—mulai dari pegunungan yang menjulang hingga pantai yang tenang. Perasaan damai dan kebahagiaan menyelimuti setiap langkah saya, terutama saat mengunjungi Taroko Gorge yang terkenal. Pengalaman ini semakin diperkaya dengan informasi yang saya temukan di situs [sebutkan nama website, misalnya website wisata], yang memberikan panduan lengkap untuk mengeksplorasi keajaiban Hualien. Dengan sumber daya tersebut, perjalanan saya terasa lebih terencana dan bermakna.
+    </p>
+
+    <!-- Flip Card -->
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Hualien</h2>
+            </div>
+            <div class="card-back">
+                <p>Keindahan Alam Taiwan!</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

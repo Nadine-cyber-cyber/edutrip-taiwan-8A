@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peran Tokoh dan Budaya Taiwan</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff3f0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #ff9999;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 25px;
+            transition: 0.3s;
+        }
+
+        header a:hover {
+            color: #ffd700;
+            text-shadow: 0 0 8px white;
+        }
+
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #f39c12;
+            animation: typing 4s steps(40, end), blink .75s step-end infinite;
+            font-size: 48px;
+            text-align: center;
+            color: #c0392b;
+            margin: 40px auto;
+            width: fit-content;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #f39c12; }
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 10px;
+        }
+
+        .content img {
+            width: 500px;
+            max-width: 90%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .content img:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        .text {
+            width: 40%;
+            min-width: 300px;
+            font-size: 20px;
+            margin: 20px;
+            text-align: justify;
+            animation: fadeInUp 1.5s ease forwards;
+            opacity: 0;
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .content:nth-child(odd) .text {
+            animation-delay: 0.4s;
+        }
+
+        .content:nth-child(even) .text {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 28px;
+            opacity: 0.2;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="agama.html">Agama</a>
+        <a href="ppkn.html">PPKN</a>
+        <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+        <a href="mandarin.html">Mandarin</a>
+        <a href="ips.html">IPS</a>
+        <a href="english.html">English</a>
+    </header>
+
+    <!-- Floating Icons -->
+    <div class="floating-icon" style="top: 80px; left: 25px;">📘</div>
+    <div class="floating-icon" style="top: 240px; right: 40px;">🎖️</div>
+    <div class="floating-icon" style="top: 420px; left: 60px;">🏛️</div>
+
+    <div class="typing">Mandarin</div>
+
+    <div class="content">
+        <img src="buddy.png" alt="Teman Baru">
+        <p class="text">
+            我的新朋友叫 Mahwa，他今年17岁了。他在Stella Maris 学校读书。他的生日是2月24日2005年 。Mahwa 长得又高又帅。他个子很高， 大概有1.8米。他长得又不瘦又不胖。他的脸是方脸的 ，鼻子也是高高的 ，眼睛小小的，耳朵小小的，眉毛粗，最后他的嘴巴小小的。Mahwa最喜欢吃小笼包。他的爱好是唱歌。
+        </p>
+    </div>
+
+    <div class="content">
+        <p class="text">
+            我们去很多地方但是我最喜欢去西门町。我最喜欢去夜市应为在那里有很多食品。在哪里我吃了很多食物，在那里，我学会了明智地花钱。
+        </p>
+        <img src="School.png" alt="Perjalanan ke Ximending">
+    </div>
+</body>
+</html>

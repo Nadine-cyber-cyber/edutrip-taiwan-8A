@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peradaban Taiwan</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(198, 202, 128);
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgb(176, 183, 49);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a {
+            color: rgb(25, 28, 180);
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 25px;
+            transition: 0.3s ease;
+        }
+
+        header a:hover {
+            color: blueviolet;
+            text-shadow: 0 0 8px gold, 0 0 12px white;
+        }
+
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid goldenrod;
+            animation: typing 3s steps(30, end), blink .75s step-end infinite;
+            font-size: 50px;
+            text-align: center;
+            color: goldenrod;
+            margin-top: 30px;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: goldenrod; }
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px;
+            flex-wrap: wrap;
+        }
+
+        .content img {
+            width: 500px;
+            max-width: 90%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+        }
+
+        .text {
+            width: 40%;
+            font-size: 22px;
+            text-align: justify;
+            animation: fadeInUp 2s ease forwards;
+            opacity: 0;
+        }
+
+        .content:nth-child(odd) .text {
+            animation-delay: 0.5s;
+        }
+
+        .content:nth-child(even) .text {
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="agama.html">Agama</a>
+        <a href="ppkn.html">PPKN</a>
+        <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+        <a href="mandarin.html">Mandarin</a>
+        <a href="ips.html">IPS</a>
+        <a href="english.html">English</a>
+    </header>
+
+    <!-- Floating History Emojis -->
+    <div class="floating-icon" style="top:80px; left:20px;">📜</div>
+    <div class="floating-icon" style="top:250px; right:30px;">🏯</div>
+    <div class="floating-icon" style="top:400px; left:50px;">🌏</div>
+
+    <!-- Title with typing animation -->
+    <div class="typing">Peradaban Taiwan</div>
+
+    <!-- First Row: Image Left, Text Right -->
+    <div class="content">
+        <img src="Cantik.png">
+        <p class="text">
+            Hualien, di Taiwan, memiliki sejarah peradaban yang kaya dan unik. Wilayah ini awalnya dihuni oleh berbagai suku asli Taiwan, yang hingga kini masih memiliki pengaruh besar terhadap budaya lokal. Hualien adalah salah satu daerah dengan populasi penduduk asli terbesar di Taiwan, dan ini tercermin dalam makanan, seni, serta festival tradisional mereka.
+        </p>
+    </div>
+
+    <!-- Second Row: Text Left, Image Right -->
+    <div class="content">
+        <p class="text">
+            Hualien juga dikenal karena keindahan alamnya yang dramatis, seperti pegunungan, pantai, dan lembah yang memukau. Wilayah ini menjadi pusat kegiatan luar ruangan seperti hiking, bersepeda, dan eksplorasi alam.
+
+            Selain itu, Hualien juga memiliki sejarah kolonial yang menarik. Nama "Hualien" sendiri berasal dari kata Jepang "Karen," yang diberikan selama masa penjajahan Jepang. Pada masa itu, Jepang mengembangkan beberapa infrastruktur penting di wilayah ini, termasuk Taman Nasional Taroko Gorge, yang kini menjadi salah satu daya tarik utama.
+        </p>
+        <img src="Street.png">
+    </div>
+</body>
+</html>

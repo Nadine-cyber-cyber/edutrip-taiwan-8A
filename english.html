@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Taiwan</title>
+
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(243, 160, 160);
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgb(237, 118, 144);
+            padding: 20px;
+            text-align:center;  
+        }
+
+        header a {
+            color :aquamarine;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size:25px;
+            transition: 0.3s ease;
+        }
+
+        header a:hover {
+            color:blueviolet;
+            text-shadow: 0 0 8px aqua, 0 0 15px blueviolet;
+        }
+
+        /* Floating Icons */
+        .floating-icon {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.4;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0);}
+            50% { transform: translateY(-20px);}
+            100% { transform: translateY(0);}
+        }
+
+        /* Typing Text Effect */
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid yellow;
+            animation: typing 3s steps(30, end), blink .75s step-end infinite;
+            font-size: 50px;
+            text-align: center;
+            color: yellow;
+            margin-top: 30px;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: yellow; }
+        }
+
+        /* Fade-In Text */
+        .animated-text {
+            text-align: center;
+            margin: 20px auto;
+            font-size: 22px;
+            width: 70%;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeSlide 2s ease forwards;
+            animation-delay: 3.5s;
+        }
+
+        @keyframes fadeSlide {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">Home</a>
+        <a href="agama.html">Agama</a>
+        <a href="ppkn.html">PPKN</a>
+        <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+        <a href="mandarin.html">Mandarin</a>
+        <a href="ips.html">IPS</a>
+        <a href="english.html">English</a>
+    </header>
+
+    <!-- Floating Emojis -->
+    <div class="floating-icon" style="left:10%; top:150px;">🌸</div>
+    <div class="floating-icon" style="left:80%; top:200px;">🍃</div>
+    <div class="floating-icon" style="left:50%; top:100px;">⭐</div>
+    <div class="floating-icon" style="left:30%; top:300px;">🌷</div>
+    <div class="floating-icon" style="left:70%; top:400px;">💖</div>
+
+    <!-- Typing Text Animation -->
+    <div class="typing">Mind Map Taiwan</div>
+
+    <!-- Fade-In Description -->
+    <p class="animated-text">
+        This Mind Map tells about the Edu-Trip Taiwan Hualien about all the experience.
+    </p>
+
+    <!-- Image Centered -->
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="Mind Map.png" width="1000" height="700">
+    </div>
+
+</body>
+</html>
